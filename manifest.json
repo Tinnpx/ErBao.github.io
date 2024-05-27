@@ -1,0 +1,29 @@
+{
+	"manifest_version": 3,
+	"name": "CEX.IO BOT",
+	"version": "1.0",
+	"description": "By DuongUET",
+	"permissions": ["*://*.cexp.cex.io/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_icon": {
+			"16": "logo.png",
+			"48": "logo.png",
+			"128": "logo.png"
+		}
+	},
+	"icons": {
+		"16": "logo.png",
+		"48": "logo.png",
+		"128": "logo.png"
+	},
+	"content_scripts": [
+		{
+		"matches": ["*://*.cexp.cex.io/*"],
+		"js": ["content.js"],
+		"all_frames": true
+		}
+	]
+}
